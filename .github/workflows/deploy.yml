@@ -32,7 +32,7 @@ jobs:
           command: c
           cwd: "./"
           files: |
-            .output
+            .next
             .npmrc
             captain-definition
             Dockerfile
