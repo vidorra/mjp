@@ -33,7 +33,6 @@ jobs:
           cwd: "./"
           files: |
             .next
-            .npmrc
             captain-definition
             Dockerfile
             package.json
