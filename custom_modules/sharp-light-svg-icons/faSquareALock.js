@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'square-a-lock';
+var width = 576;
+var height = 512;
+var aliases = [];
+var unicode = 'e44d';
+var svgPathData = 'M32 64l384 0 0 106.8c9.9-4.7 20.7-8 32-9.6L448 64l0-32-32 0L32 32 0 32 0 64 0 448l0 32 32 0 288 0 0-32L32 448 32 64zm206.5 73.2l-4.3-9.2-20.4 0-4.3 9.2L94 384l35.3 0 30-64 129.5 0 30 64 1.3 0 0-72.7L238.5 137.2zM224 181.7L273.8 288l-99.5 0L224 181.7zM464 224c26.5 0 48 21.5 48 48l0 48-96 0 0-48c0-26.5 21.5-48 48-48zm-80 48l0 48-32 0 0 32 0 128 0 32 32 0 160 0 32 0 0-32 0-128 0-32-32 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zm0 80l160 0 0 128-160 0 0-128z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faSquareALock = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

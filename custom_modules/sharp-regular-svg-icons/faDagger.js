@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'dagger';
+var width = 384;
+var height = 512;
+var aliases = [];
+var unicode = 'f6cb';
+var svgPathData = 'M216 0l0 24 0 104 8 0 48 0 40 0 24 0 48 0 0 48c0 26.5-21.5 48-48 48s-48-21.5-48-48l-16 0-48 0-32 0-32 0-48 0-16 0c0 26.5-21.5 48-48 48s-48-21.5-48-48l0-48 48 0 24 0 40 0 48 0 8 0 0-104 0-24 48 0zM160 398.6L192 437l32-38.4L224 208l48 0 0 208-48.8 58.5L192 512l-31.2-37.5L112 416l0-208 48 0 0 190.6z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faDagger = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

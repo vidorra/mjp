@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'angel';
+var width = 576;
+var height = 512;
+var aliases = [];
+var unicode = 'f779';
+var svgPathData = 'M384 64.2c0-.1 0-.1 0-.2s0-.1 0-.2s-.1-.3-.2-.6c-.3-.6-.9-1.8-2.3-3.5c-2.9-3.5-8.4-7.9-17.3-12.4C346.4 38.4 319.5 32 288 32s-58.4 6.4-76.2 15.4c-8.9 4.5-14.4 8.9-17.3 12.4c-1.4 1.7-2 2.8-2.3 3.5c-.1 .3-.2 .5-.2 .6s0 .1 0 .2s0 .1 0 .2s.1 .3 .2 .6c.3 .6 .9 1.8 2.3 3.5c1.4 1.7 3.4 3.6 6.2 5.6c-6.7 8.3-12.2 17.6-16.3 27.7C169 91 160 78 160 64c0-35.3 57.3-64 128-64s128 28.7 128 64c0 14-9 27-24.3 37.5c-4.1-10-9.6-19.3-16.3-27.7c2.7-2 4.8-4 6.2-5.6c1.4-1.7 2-2.8 2.3-3.5c.1-.3 .2-.5 .2-.6zM288 176a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm0-112a80 80 0 1 1 0 160 80 80 0 1 1 0-160zM87.9 325.4l14.9 22.4L91.6 372.1 49.2 464l70.8 0 89.4-178.7L132.1 208 48 208l0 57.5 39.9 59.9zM248 256l80 0 96-96 104 0 48 0 0 48 0 72-48 72 48 104 0 8 0 48-48 0-48 0-53.7 0-276.7 0L96 512l-48 0L0 512l0-48 0-8L48 352 0 280l0-72 0-48 48 0 104 0 96 96zm118.6 29.3L456 464l70.8 0-42.4-91.9-11.3-24.4 14.9-22.4L528 265.5l0-57.5-84.1 0-77.3 77.3zM402.3 464l-80-160-68.7 0-80 160 228.7 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faAngel = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

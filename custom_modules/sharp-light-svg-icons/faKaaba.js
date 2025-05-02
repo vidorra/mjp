@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'kaaba';
+var width = 576;
+var height = 512;
+var aliases = [128331];
+var unicode = 'f66b';
+var svgPathData = 'M544 193.8L288 279.1 32 193.8l0-39.1L288 240l256-85.3 0 39.1zm0 33.7l0 38.3-32 10.7 0 33.7 32-10.7 0 93.4L288 478.3 32 392.9l0-93.4 32 10.7 0-33.7L32 265.8l0-38.3 250.9 83.6 5.1 1.7 5.1-1.7L544 227.5zm0-108.5l0 1.9L288 206.3 32 120.9l0-1.9L288 33.7l256 85.3zM576 416l0-272 0-16 0-32L288 0 0 96l0 32 0 16L0 416l288 96 288-96zM96 287.1l0 33.7 96 32 0-33.7-96-32zm186.9 96l5.1 1.7 5.1-1.7L352 363.5l0-33.7-64 21.3-64-21.3 0 33.7 58.9 19.6zM384 352.9l96-32 0-33.7-96 32 0 33.7z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faKaaba = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

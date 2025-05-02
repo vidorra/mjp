@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'id-card';
+var width = 576;
+var height = 512;
+var aliases = [62147,"drivers-license"];
+var unicode = 'f2c2';
+var svgPathData = 'M528 160l0 272-213.3 0L288 352l-160 0-26.7 80L48 432l0-272 480 0zM48 32L0 32 0 80 0 432l0 48 48 0 480 0 48 0 0-48 0-352 0-48-48 0L48 32zM272 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm104-48l-24 0 0 48 24 0 80 0 24 0 0-48-24 0-80 0zm0 96l-24 0 0 48 24 0 80 0 24 0 0-48-24 0-80 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faIdCard = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #59544E;
+    --card: #F6EEEB;
+    --card-foreground: #ffffff;
+    --popover: #ffffff;
+    --popover-foreground: #020817;
+    
+    --primary: #FB8654;
+    --primary-foreground: #ffffff;
+    --secondary: #F57B47;
+    --secondary-foreground: #ffffff;
+
+    --radius: 8px;
+    --input-border: #A7A19B;
+  }
+
+  * {
+    isolation: auto !important;
+  }
+}
+
+/* Add these styles for the Select popover */
+.select-content {
+  @apply bg-white border rounded-md shadow-lg;
+  z-index: 50;
+}
+
+.select-item {
+  @apply px-2 py-1.5 text-sm hover:bg-gray-100 cursor-pointer;
+}
+
+
+@layer components {
+  .btn-small {
+    @apply bg-secondary text-primary-foreground hover:bg-primary inline-flex items-center justify-center rounded-[24px] text-sm font-medium transition-colors  h-9 px-4 py-2 flex-1;
+  }
+  
+  .btn-large {
+    @apply bg-secondary hover:bg-primary text-secondary-foreground hover:bg-primary inline-flex items-center justify-center  h-10 px-10 py-4  rounded-[24px] text-2xl font-normal;
+  }
+
+  button[type*="combobox"] {
+    @apply bg-white;
+  } 
+
+  .input-glass {
+    @apply w-full p-6 rounded-full border border-white/10 
+           bg-white text-foreground
+           placeholder:text-black/50
+           focus:ring-2 focus:ring-primary focus:border-transparent
+           focus-visible:outline-none;
+    }
+} 
+
+header {
+  @apply relative bg-white inline-block;
+}
+
+header::before {
+  content: '';
+  @apply absolute w-[24px] h-[24px] pointer-events-none top-[1px] right-0;
+  transform: translateX(100%);
+  background: transparent;
+  border-top-left-radius: 28px;
+  box-shadow: -6px -6px 0 5px theme('colors.white');
+}
+
+header::after {
+  content: '';
+  @apply absolute w-[24px] h-[24px] pointer-events-none bottom-0 left-0;
+  transform: translateY(100%);
+  background: transparent;
+  border-top-left-radius: 28px;
+  box-shadow: -6px -6px 0 5px theme('colors.white');
+}

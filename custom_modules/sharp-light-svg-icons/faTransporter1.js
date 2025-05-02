@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'transporter-1';
+var width = 512;
+var height = 512;
+var aliases = [];
+var unicode = 'e043';
+var svgPathData = 'M256 32a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm0 80A56 56 0 1 0 256 0a56 56 0 1 0 0 112zM96 448l0 16 0 32 0 16 32 0 0-16 0-16 256 0 0 16 0 16 32 0 0-16 0-32 0-16-16 0-16 0-256 0-16 0-16 0zm96-255l0 95 32 0 0-112 64 0 0 112 32 0 0-95 67.3 88.7 9.7 12.7 25.5-19.3-9.7-12.7-84.9-112L323 144l-7.9 0-118.2 0-7.9 0-4.8 6.3-84.9 112-9.7 12.7 25.5 19.3 9.7-12.7L192 193zm288-49l0-16-32 0 0 16 0 16-16 0-16 0 0 32 16 0 16 0 0 16 0 16 32 0 0-16 0-16 16 0 16 0 0-32-16 0-16 0 0-16zM64 336l0-16-32 0 0 16 0 16-16 0L0 352l0 32 16 0 16 0 0 16 0 16 32 0 0-16 0-16 16 0 16 0 0-32-16 0-16 0 0-16zm112-16l-16 0 0 32 16 0 160 0 16 0 0-32-16 0-160 0zm0 64l-16 0 0 32 16 0 160 0 16 0 0-32-16 0-160 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faTransporter1 = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

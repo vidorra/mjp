@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'car-side';
+var width = 640;
+var height = 512;
+var aliases = [128663];
+var unicode = 'f5e4';
+var svgPathData = 'M111.8 32L128 32l256 0 11.5 0 7.2 9L523.5 192l68.5 0 48 0 0 48 0 112 0 48-48 0-17.3 0c-7.6 45.4-47.1 80-94.7 80s-87.1-34.6-94.7-80l-130.7 0c-7.6 45.4-47.1 80-94.7 80s-87.1-34.6-94.7-80L48 400 0 400l0-48L0 240l0-48 47.8 0 58-144.9 6-15.1zM389.5 352c13.2-37.3 48.7-64 90.5-64s77.4 26.7 90.5 64l21.5 0 0-112L48 240l0 112 21.5 0c13.2-37.3 48.7-64 90.5-64s77.4 26.7 90.5 64l138.9 0zm45.3 48a48 48 0 1 0 90.5-32 48 48 0 1 0 -90.5 32zM208 384a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM99.4 192L224 192l0-16 0-80 0-16-79.8 0L99.4 192zM272 192l190.1 0L372.5 80 272 80l0 16 0 80 0 16z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faCarSide = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

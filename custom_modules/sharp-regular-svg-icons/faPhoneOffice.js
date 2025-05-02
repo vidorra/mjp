@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'phone-office';
+var width = 576;
+var height = 512;
+var aliases = [];
+var unicode = 'f67d';
+var svgPathData = 'M144 48l0 320 80 0 0-320-80 0zM96 0l48 0 80 0 48 0 0 32 48 0 24 0 24 0 160 0 48 0 0 48 0 64 0 24 0 24 0 272 0 48-48 0L48 512 0 512l0-48L0 80 0 32l48 0 48 0L96 0zm0 80L48 80l0 384 480 0 0-272-184 0-24 0 0-24 0-88-48 0 0 288 0 48-48 0-80 0-48 0 0-48L96 80zm432 0L368 80l0 64 160 0 0-64zM320 240l64 0 0 64-64 0 0-64zm64 96l0 64-64 0 0-64 64 0zm32-96l64 0 0 64-64 0 0-64zm64 96l0 64-64 0 0-64 64 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faPhoneOffice = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

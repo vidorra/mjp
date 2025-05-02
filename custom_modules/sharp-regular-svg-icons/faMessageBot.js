@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'message-bot';
+var width = 640;
+var height = 512;
+var aliases = [];
+var unicode = 'e3b8';
+var svgPathData = 'M272 480l-48 32 0-48 0-9.7 0-38.3-48 0-32 0-48 0 0-48 0-160-32 0 0 16L0 224l0-64 64 0 0 16 32 0L96 48 96 0l48 0L496 0l48 0 0 48 0 128 32 0 0-16 64 0 0 64-64 0 0-16-32 0 0 160 0 48-48 0-128 0-96 64zM144 368l80 0 48 0 0 48 0 6.3 69.4-46.2 12.1-8.1 14.5 0 128 0 0-176 0-144L144 48l0 144 0 176zM464 96l0 192-288 0 0-192 288 0zM240 224a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm192-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faMessageBot = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

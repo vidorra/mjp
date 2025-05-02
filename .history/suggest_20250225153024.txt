@@ -1,0 +1,52 @@
+Suggestions for improving Shot Type and Depth Description UI:
+
+1. Integrated Approach
+- Instead of showing "Add Depth Description" as a separate checkbox, integrate depth options directly into the Shot Type selection
+- Group shot types into categories with visual indicators:
+  * Close Range: Extreme Close-Up, Close-Up, Macro Shot
+  * Mid Range: Medium Shot
+  * Wide Range: Wide Shot, Extreme Wide Shot, Full Shot (with depth options)
+- For Wide Range shots, show depth options as sub-selections with visual previews
+- Use a two-level select or expandable cards with visual representations
+
+2. Visual Selection Cards
+- Replace the dropdown with visual cards for each shot type
+- Include example thumbnails showing the composition for each shot type
+- For wide shots, show depth variations as sub-cards with visual examples
+- Example layout:
+  [Thumbnail]
+  Shot Type Name
+  Brief Description
+  [Depth Options appear below for wide shots]
+
+3. Interactive Slider Approach
+- Create a visual slider representing camera distance
+- As user slides from close to far:
+  * Extreme Close-Up → Close-Up → Medium → Full → Wide → Extreme Wide
+- Show a visual preview that updates with slider position
+- For wide shots, show depth options as radio buttons below the slider
+- Include visual indicators of what each position is best suited for
+
+4. Guided Selection
+- Start with a simple question: "How much of the subject do you want to capture?"
+- Provide visual options:
+  * "Just the details" (close-up options)
+  * "The full subject" (medium shots)
+  * "Subject with environment" (wide shots + depth options)
+- Show relevant options based on selection
+- Include example photos for each option
+
+5. Smart Presets
+- Based on the selected photography style and subject category, suggest optimal shot types
+- Example:
+  * For Product Photography + "Jewelry": Suggest close-up shots
+  * For Landscape + "Mountain": Suggest wide shots with depth options
+- Show these as preset cards with visual examples
+- Allow manual override with full options
+
+Implementation Priority:
+1. Visual Selection Cards - Most intuitive and user-friendly
+2. Smart Presets - Adds value through contextual suggestions
+3. Guided Selection - Helps users make informed choices
+4. Integrated Approach - Cleaner UI but requires careful design
+5. Interactive Slider - Innovative but may require more development effort

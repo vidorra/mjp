@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'transporter-1';
+var width = 512;
+var height = 512;
+var aliases = [];
+var unicode = 'e043';
+var svgPathData = 'M256 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-51.1 32l-12.1 0-7.2 9.7-83.3 112L88 268.9l38.5 28.7 14.3-19.3L192 209.6l0 78.4 48 0 0-112 32 0 0 112 48 0 0-78.4 51.1 68.7 14.3 19.3L424 268.9l-14.3-19.3-83.3-112-7.2-9.7-12.1 0-102.2 0zM480 160l-16-32-16 32-32 16 32 16 16 32 16-32 32-16-32-16zM64 352L48 320 32 352 0 368l32 16 16 32 16-32 32-16L64 352zm56 112l-24 0 0 48 24 0 272 0 24 0 0-48-24 0-272 0zm56-144l-16 0 0 32 16 0 160 0 16 0 0-32-16 0-160 0zm0 64l-16 0 0 32 16 0 160 0 16 0 0-32-16 0-160 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faTransporter1 = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'trash-arrow-up';
+var width = 448;
+var height = 512;
+var aliases = ["trash-restore"];
+var unicode = 'f829';
+var svgPathData = 'M160 0L147.2 0 140 10.7 93.8 80 80.1 80 32 80 0 80l0 48 35.6 0L64 512l320 0 28.4-384 35.6 0 0-48-32 0-48.1 0-13.7 0L308 10.7 300.8 0 288 0 160 0zM296.5 80l-145 0 21.3-32 102.3 0 21.3 32zM108.6 464L83.7 128l280.6 0L339.4 464l-230.8 0zM238.1 193.9L224 179.7l-14.1 14.1-64 64L131.7 272 160 300.3l14.1-14.1L204 256.3 204 384l0 20 40 0 0-20 0-127.7 29.9 29.9L288 300.3 316.3 272l-14.1-14.1-64-64z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faTrashArrowUp = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

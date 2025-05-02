@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'binary-lock';
+var width = 640;
+var height = 512;
+var aliases = [];
+var unicode = 'e33d';
+var svgPathData = 'M224 0l0 48 24 0 32 0 0 128-32 0-24 0 0 48 24 0 56 0 56 0 24 0 0-48-24 0-32 0 0-152 0-24L304 0 248 0 224 0zM0 288l0 48 24 0 32 0 0 128-32 0L0 464l0 48 24 0 56 0 56 0 24 0 0-48-24 0-32 0 0-152 0-24-24 0-56 0L0 288zM24 0L0 0 0 24 0 200l0 24 24 0 144 0 24 0 0-24 0-176 0-24L168 0 24 0zM48 176L48 48l96 0 0 128-96 0zM192 288l0 24 0 176 0 24 24 0 144 0 24 0 0-24 0-176 0-24-24 0-144 0-24 0zm48 48l96 0 0 128-96 0 0-128zm288-96c17.7 0 32 14.3 32 32l0 48-64 0 0-48c0-17.7 14.3-32 32-32zm-80 32l0 48-32 0 0 192 224 0 0-192-32 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faBinaryLock = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

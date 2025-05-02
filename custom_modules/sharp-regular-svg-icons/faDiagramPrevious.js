@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'diagram-previous';
+var width = 512;
+var height = 512;
+var aliases = [];
+var unicode = 'e478';
+var svgPathData = 'M464 336L48 336l0 96 416 0 0-96zm48-48l0 48 0 96 0 48-48 0L48 480 0 480l0-48 0-96 0-48 48 0 184 0 0-86.1-23 23-17 17L158.1 208l17-17 64-64 17-17 17 17 64 64 17 17L320 241.9l-17-17-23-23 0 86.1 184 0 48 0zM96.8 224L0 224 0 32l512 0 0 192-96.8 0-39.6-39.6-80-80L256 64.8l-39.6 39.6-80 80L96.8 224z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faDiagramPrevious = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

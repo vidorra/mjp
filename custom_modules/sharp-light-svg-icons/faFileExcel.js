@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'file-excel';
+var width = 384;
+var height = 512;
+var aliases = [];
+var unicode = 'f1c3';
+var svgPathData = 'M352 480L32 480 32 32l160 0 0 144 0 16 16 0 144 0 0 288zM224 37.3L346.7 160 224 160l0-122.7zM232 0L32 0 0 0 0 32 0 480l0 32 32 0 320 0 32 0 0-32 0-328L232 0zm46.7 240l-39.1 0L192 308.1 144.3 240l-39.1 0 3.6 5.2L172.5 336l-63.6 90.8-3.6 5.2 39.1 0L192 363.9 239.7 432l39.1 0-3.6-5.2L211.5 336l63.6-90.8 3.6-5.2z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faFileExcel = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

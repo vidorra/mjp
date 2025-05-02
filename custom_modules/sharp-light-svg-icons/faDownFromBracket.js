@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'down-from-bracket';
+var width = 448;
+var height = 512;
+var aliases = [];
+var unicode = 'e66b';
+var svgPathData = 'M176 304l0 32-32 0-48 0 0 17.7L224 468.9 352 353.7l0-17.7-48 0-32 0 0-32 0-112-96 0 0 112zM64 304l32 0 16 0 32 0 0-32 0-80 0-32 32 0 96 0 32 0 0 32 0 80 0 32 32 0 16 0 32 0 0 32 0 32L224 512 64 368l0-32 0-32zM416 176l0-144L32 32l0 144 0 16L0 192l0-16L0 16 0 0 16 0 432 0l16 0 0 16 0 160 0 16-32 0 0-16z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faDownFromBracket = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

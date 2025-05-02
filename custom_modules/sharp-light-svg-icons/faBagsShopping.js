@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'bags-shopping';
+var width = 576;
+var height = 512;
+var aliases = [128717];
+var unicode = 'f847';
+var svgPathData = 'M160 96c0-35.3 28.7-64 64-64s64 28.7 64 64l0 64-128 0 0-64zm-32 64l-96 0L0 160l0 32L0 448l0 32 32 0 128 0 0-32L32 448l0-256 384 0 0 32 32 0 0-32 0-32-32 0-96 0 0-64c0-53-43-96-96-96s-96 43-96 96l0 64zm96 128l320 0 0 192-320 0 0-192zm-32-32l0 32 0 192 0 32 32 0 320 0 32 0 0-32 0-192 0-32-32 0-320 0-32 0zm128 80l0-16-32 0 0 16 0 16c0 53 43 96 96 96s96-43 96-96l0-16 0-16-32 0 0 16 0 16c0 35.3-28.7 64-64 64s-64-28.7-64-64l0-16z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faBagsShopping = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

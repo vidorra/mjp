@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'bowl-chopsticks';
+var width = 512;
+var height = 512;
+var aliases = [];
+var unicode = 'e2e9';
+var svgPathData = 'M0 128L0 96 512 0l0 48L0 128zm0 16l512-16 0 48L0 176l0-32zM176 464l160 0 0-20.9 26.7-13.2c55.1-27.3 93.9-82.4 97.8-147.5l.6-10.3L50.9 272l.6 10.3c3.8 65.1 42.7 120.3 97.8 147.5L176 443.1l0 20.9zM3.6 285.2L2.8 272 0 224l48.1 0 415.8 0 48.1 0-2.8 48-.8 13.2C503.5 368.1 454 438.2 384 472.9l0 39.1-48 0-160 0-48 0 0-39.1C58 438.2 8.5 368.1 3.6 285.2z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faBowlChopsticks = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

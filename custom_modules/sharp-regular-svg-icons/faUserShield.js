@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'user-shield';
+var width = 640;
+var height = 512;
+var aliases = [];
+var unicode = 'f505';
+var svgPathData = 'M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0A128 128 0 1 0 96 128a128 128 0 1 0 256 0zM65 464L99.5 352l226.4 0c-3.4-16.1-5.3-32.3-5.7-48L64 304 14.8 464 0 512l50.2 0 347.6 0 28.3 0c-19.2-13.7-35.7-30-49.5-48L65 464zM591.3 312.4c-5.2 61-38.8 121.7-95.3 148l0-184.9 95.3 36.9zM496 512c96-32 144-130.2 144-216l0-16.2L496 224 352 279.8l0 16.2c0 85.8 48 184 144 216z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faUserShield = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

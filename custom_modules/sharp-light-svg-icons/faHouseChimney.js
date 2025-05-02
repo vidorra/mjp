@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'house-chimney';
+var width = 576;
+var height = 512;
+var aliases = [63499,"home-lg"];
+var unicode = 'e3af';
+var svgPathData = 'M288 2.7L298.6 12 384 87.4 384 48l0-16 16 0 96 0 16 0 0 16 0 152-.3 0 58.9 52-21.2 24L512 243l0 253 0 16-16 0L80 512l-16 0 0-16 0-253L26.6 276 5.4 252l272-240L288 2.7zM480 172.1L480 64l-64 0 0 51.6 64 56.5zM96 214.7L96 480l112 0 0-176c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16l0 176 112 0 0-265.3L288 45.3 96 214.7zM336 480l0-160-96 0 0 160 96 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faHouseChimney = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

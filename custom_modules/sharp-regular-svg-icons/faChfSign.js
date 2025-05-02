@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'chf-sign';
+var width = 640;
+var height = 512;
+var aliases = [];
+var unicode = 'e602';
+var svgPathData = 'M240 56l0-24-48 0 0 24 0 400 0 24 48 0 0-24 0-184 128 0 0 184 0 24 48 0 0-24 0-400 0-24-48 0 0 24 0 168-128 0 0-168zM472 32l-24 0 0 24 0 400 0 24 48 0 0-24 0-184 88 0 24 0 0-48-24 0-88 0 0-144 120 0 24 0 0-48-24 0L472 32zM88 40C43.8 40 8 75.8 8 120L8 408c0 44.2 35.8 80 80 80s80-35.8 80-80l0-16-48 0 0 16c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-288c0-17.7 14.3-32 32-32s32 14.3 32 32l0 16 48 0 0-16c0-44.2-35.8-80-80-80z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faChfSign = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

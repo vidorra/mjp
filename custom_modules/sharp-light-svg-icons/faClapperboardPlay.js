@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'clapperboard-play';
+var width = 512;
+var height = 512;
+var aliases = [];
+var unicode = 'e132';
+var svgPathData = 'M480 192L32 192l0 256 448 0 0-256zm0-32l0-96-1.4 0-96 96 97.4 0zm-249.4 0l106.7 0 96-96L326.6 64l-96 96zm-45.3 0l96-96L174.6 64l-96 96 106.7 0zM32 64l0 96 1.4 0 96-96L32 64zm480 96l0 16 0 16 0 256 0 32-32 0L32 480 0 480l0-32L0 192l0-16 0-16L0 64 0 32l32 0 448 0 32 0 0 32 0 96zM216.1 226.2l136 80L375.6 320l-23.4 13.8-136 80L192 428l0-28 0-160 0-28 24.1 14.2zM312.4 320L224 268 224 372l88.4-52z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faClapperboardPlay = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

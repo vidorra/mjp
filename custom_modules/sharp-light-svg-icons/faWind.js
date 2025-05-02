@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'wind';
+var width = 512;
+var height = 512;
+var aliases = [];
+var unicode = 'f72e';
+var svgPathData = 'M288 0l0 32 16 0 64 0c26.5 0 48 21.5 48 48s-21.5 48-48 48L16 128 0 128l0 32 16 0 352 0c44.2 0 80-35.8 80-80s-35.8-80-80-80L304 0 288 0zm64 416l16 0 56 0c48.6 0 88-39.4 88-88s-39.4-88-88-88L16 240 0 240l0 32 16 0 408 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-56 0-16 0 0 32zM112 512l64 0c44.2 0 80-35.8 80-80s-35.8-80-80-80L16 352 0 352l0 32 16 0 160 0c26.5 0 48 21.5 48 48s-21.5 48-48 48l-64 0-16 0 0 32 16 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faWind = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

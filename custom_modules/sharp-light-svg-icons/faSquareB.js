@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'square-b';
+var width = 448;
+var height = 512;
+var aliases = [];
+var unicode = 'e264';
+var svgPathData = 'M32 64l0 384 384 0 0-384L32 64zM0 32l32 0 384 0 32 0 0 32 0 384 0 32-32 0L32 480 0 480l0-32L0 64 0 32zm128 96l16 0 104 0c39.8 0 72 32.2 72 72c0 19.3-7.6 36.8-19.9 49.7C321.6 262.2 336 285.4 336 312c0 39.8-32.2 72-72 72l-120 0-16 0 0-16 0-112 0-112 0-16zm160 72c0-22.1-17.9-40-40-40l-88 0 0 80 88 0c22.1 0 40-17.9 40-40zM160 352l104 0c22.1 0 40-17.9 40-40s-17.9-40-40-40l-16 0-88 0 0 80z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faSquareB = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

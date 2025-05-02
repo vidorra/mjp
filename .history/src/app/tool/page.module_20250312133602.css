@@ -1,0 +1,7 @@
+.toolPage {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-image 500ms;
+}

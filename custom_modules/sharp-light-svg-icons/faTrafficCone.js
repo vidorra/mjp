@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'traffic-cone';
+var width = 512;
+var height = 512;
+var aliases = [];
+var unicode = 'f636';
+var svgPathData = 'M221.2 0L232 0l48 0 10.8 0 4 10.1L482.8 480l13.2 0 16 0 0 32-16 0L16 512 0 512l0-32 16 0 13.2 0 188-469.9 4-10.1zm176 352l-282.3 0L63.6 480l384.7 0L397.2 352zm-12.8-32L333.2 192l-154.3 0L127.6 320l256.7 0zM191.6 160l128.7 0L269.2 32l-26.3 0L191.6 160z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faTrafficCone = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

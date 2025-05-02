@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'arrow-up-triangle-square';
+var width = 576;
+var height = 512;
+var aliases = ["sort-shapes-up"];
+var unicode = 'f88a';
+var svgPathData = 'M296 224l20-32L397.1 62.2 416 32l18.9 30.2L516 192l20 32-37.7 0-164.5 0L296 224zm182.3-32L416 92.4 353.7 192l124.5 0zM160 33.4l11.3 11.3 88 88L270.6 144 248 166.6l-11.3-11.3L176 94.6 176 464l0 16-32 0 0-16 0-369.4L83.3 155.3 72 166.6 49.4 144l11.3-11.3 88-88L160 33.4zM352 448l128 0 0-128-128 0 0 128zM320 288l32 0 128 0 32 0 0 32 0 128 0 32-32 0-128 0-32 0 0-32 0-128 0-32z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faArrowUpTriangleSquare = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

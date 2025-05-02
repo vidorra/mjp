@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'square-dashed-circle-plus';
+var width = 576;
+var height = 512;
+var aliases = [];
+var unicode = 'e5c2';
+var svgPathData = 'M24 32L0 32 0 56 0 160l48 0 0-80 80 0 0-48L24 32zM0 192L0 320l48 0 0-128L0 192zM0 352L0 456l0 24 24 0 104 0 0-48-80 0 0-80L0 352zM400 80l0 112 48 0 0-136 0-24-24 0L320 32l0 48 80 0zM160 480l96 0 0-48-96 0 0 48zm0-400l128 0 0-48L160 32l0 48zM432 512a144 144 0 1 0 0-288 144 144 0 1 0 0 288zm16-208l0 48 48 0 16 0 0 32-16 0-48 0 0 48 0 16-32 0 0-16 0-48-48 0-16 0 0-32 16 0 48 0 0-48 0-16 32 0 0 16z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faSquareDashedCirclePlus = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

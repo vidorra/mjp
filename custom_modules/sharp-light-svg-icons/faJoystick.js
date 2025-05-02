@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'joystick';
+var width = 448;
+var height = 512;
+var aliases = [128377];
+var unicode = 'f8c5';
+var svgPathData = 'M304 112a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zm32 0c0 56.4-41.7 103.1-96 110.9l0 97.1-32 0 0-97.1c-54.3-7.8-96-54.4-96-110.9C112 50.1 162.1 0 224 0s112 50.1 112 112zM64 288l16 0 32 0 16 0 0 32-16 0-32 0-16 0 0-32zM416 480l0-96L32 384l0 96 384 0zM32 352l384 0 32 0 0 32 0 96 0 32-32 0L32 512 0 512l0-32 0-96 0-32 32 0zM208 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faJoystick = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

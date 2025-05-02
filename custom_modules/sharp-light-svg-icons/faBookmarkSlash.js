@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'bookmark-slash';
+var width = 640;
+var height = 512;
+var aliases = [];
+var unicode = 'e0c2';
+var svgPathData = 'M512 32l0-32L480 0 160 0 128 0l0 22.9 32 25.3L160 32l320 0 0 268.8L512 326l0-294zM160 456.3l0-245.1L128 186l0 289 0 37 32-18.7L320 400l160 93.3L512 512l0-22.9-68.7-54.3L336.1 372.4 320 363l-16.1 9.4L160 456.3zM32.5 10L19.9 .1 .1 25.3l12.6 9.9L607.8 502.2l12.6 9.9 19.8-25.2-12.6-9.9L32.5 10z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faBookmarkSlash = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

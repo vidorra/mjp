@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'backward-step';
+var width = 320;
+var height = 512;
+var aliases = ["step-backward"];
+var unicode = 'f048';
+var svgPathData = 'M64 80l0-16L32 64l0 16 0 160 0 32 0 160 0 16 32 0 0-16 0-138L256 426l32 22 0-38.8 0-306.3L288 64 256 86 64 218 64 80zm1.2 176L256 124.8l0 262.3L65.2 256z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faBackwardStep = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

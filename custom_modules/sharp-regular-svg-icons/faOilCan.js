@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'oil-can';
+var width = 640;
+var height = 512;
+var aliases = [];
+var unicode = 'f613';
+var svgPathData = 'M280 112l72 0 0-48L160 64l0 48 72 0 0 48-88 0-48 0-48 0L0 160l0 48 0 96 96 42.7L96 368l0 48 48 0 240 0 48 0L640 192l-32-32-2 .4-2.6 .5L448 192l-64-32-104 0 0-48zM48 208l48 0 0 86.1L48 272.8 48 208zm378.5 26.9l14.7 7.4 16.2-3.2 90.1-18L411.1 368 384 368l-240 0 0-52.5L144 208l228.7 0 53.9 26.9z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faOilCan = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

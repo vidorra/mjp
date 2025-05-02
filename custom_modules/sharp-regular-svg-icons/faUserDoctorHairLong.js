@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'user-doctor-hair-long';
+var width = 448;
+var height = 512;
+var aliases = [];
+var unicode = 'e459';
+var svgPathData = 'M304 144c0 44.2-35.8 80-80 80s-80-35.8-80-80l0-16c0-5.5 .6-10.8 1.6-16l62.4 0 32-32 16 16 41.3 0c4.3 9.8 6.7 20.6 6.7 32l0 16zM224 0C153.3 0 96 57.3 96 128l0 16 0 48L48 240l0 32 176 0 176 0 0-32-48-48 0-48 0-16C352 57.3 294.7 0 224 0zM99.5 352l36.5 0 0 50.3c-23.1 6.9-40 28.3-40 53.7c0 30.9 25.1 56 56 56s56-25.1 56-56c0-25.4-16.9-46.8-40-53.7l0-50.3 112 0 0 50c-27.6 7.1-48 32.2-48 62l0 32 0 16 16 0 24 0 16 0 0-32-16 0-8 0 0-16c0-17.7 14.3-32 32-32s32 14.3 32 32l0 16-8 0-16 0 0 32 16 0 24 0 16 0 0-16 0-32c0-29.8-20.4-54.9-48-62l0-50 36.5 0 49.2 160 50.2 0L384 304 64 304 0 512l50.2 0L99.5 352zM128 456a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faUserDoctorHairLong = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

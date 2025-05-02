@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasl';
+var iconName = 'tree-christmas';
+var width = 448;
+var height = 512;
+var aliases = [127876];
+var unicode = 'f7db';
+var svgPathData = 'M217.3 0l13.3 0 11.1 0 3.9 10.4 17.4 46.5 46.5 17.4L320 78.2l0 11.1 0 13.3 0 11.1-10.4 3.9-46.5 17.4-17.4 46.5L241.8 192l-11.1 0-13.3 0-11.1 0-3.9-10.4-17.4-46.5-46.5-17.4L128 113.8l0-11.1 0-13.3 0-11.1 10.4-3.9 46.5-17.4 17.4-46.5L206.2 0l11.1 0zm-5 75l-2.6 6.8L203 84.3 171.8 96 203 107.7l6.8 2.6 2.6 6.8L224 148.2 235.7 117l2.6-6.8 6.8-2.6L276.2 96 245 84.3l-6.8-2.6L235.7 75 224 43.8 212.3 75zM24 320L142.9 153.5l17.1 6.4 6.1 16.2L63.3 320 80 320l57.7 0-30.6 49L37.7 480l372.5 0L340.9 369l-30.6-49 57.7 0 16.7 0L281.9 176.1l6.1-16.2 17.1-6.4L424 320l0 32-18.3 0L392 352l-24 0 20 32 60 96 0 32-32 0L32 512 0 512l0-32 60-96 20-32-24 0-13.7 0L24 352l0-32zm136-32a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM288 392a24 24 0 1 1 0 48 24 24 0 1 1 0-48z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faTreeChristmas = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;

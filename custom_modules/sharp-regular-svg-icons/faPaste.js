@@ -1,0 +1,30 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fasr';
+var iconName = 'paste';
+var width = 512;
+var height = 512;
+var aliases = ["file-clipboard"];
+var unicode = 'f0ea';
+var svgPathData = 'M80 96l0 48 80 0 0-16 0-32 32 0 64 0 16 0 48 0 0-48-48 0-56.6 0C211.6 20.9 188.2 0 160 0s-51.6 20.9-55.4 48L48 48 0 48 0 96 0 400l0 48 48 0 112 0 0-48L48 400 48 96l32 0zm64-40a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zM464 464l-224 0 0-288 156.1 0L464 243.9 464 464zm48-240l-96-96-176 0-48 0 0 48 0 288 0 48 48 0 224 0 48 0 0-48 0-240z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    aliases,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faPaste = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = aliases;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+exports.aliases = aliases;
