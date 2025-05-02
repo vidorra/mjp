@@ -11,7 +11,7 @@ WORKDIR /app
 COPY . .
 
 # install packages
-# RUN npm ci
+RUN npm ci
 
 # run
 EXPOSE 3000
