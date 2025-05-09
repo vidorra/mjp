@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import VerticalPhotoSmallStack from '../components/VerticalPhotoSmallStack';
-import '@/styles/fontawesome.css';
+import VerticalPhotoSmallStack from '../../components/VerticalPhotoSmallStack';
 
-export default function Home() {
+export default function Example() {
   const photos = [
     {
       id: 1,
@@ -69,39 +68,24 @@ export default function Home() {
           style={{ background: 'radial-gradient(100.18% 100.18% at 50% -0.18%, var(--secondary) 0%, var(--primary) 100%)' }}
         >
           <div className="grid grid-cols-12 gap-8 h-full p-12">
-            <div className="col-span-5">
-              <div className="text-white pr-4">
-                <h2 className="text-[clamp(2rem,4vw,3rem)] font-normal mb-6 leading-[1.1]">
-                    Create Perfect
-                    <br />
-                    Photo Prompts
+            <div className="col-span-5"></div>
+            <div className="col-span-7 grid grid-cols-2 gap-8 items-center">
+              {/* Left Column - Text */}
+              <div className="text-white">
+                <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold mb-6 leading-[1.1]">
+                  Create Perfect
+                  <br />
+                  Photo Prompts
                 </h2>
                 <p className="text-[clamp(1rem,1.5vw,1.5rem)] leading-[1.4] opacity-90">
                   Our advanced tools and intuitive interface help you create stunning visuals that capture the perfect moment, every time.
-                </p>  
-              </div>  
-            </div>
-            <div className="col-span-7 grid grid-cols-2 gap-8 items-center">
-              {/* Left Column - Text */}
-             
-              <div className="flex flex-col gap-4">
-              <div className="border-white border-[4px] rounded-xl shadow-lg">
-                <img src="/horizontal-facecream-add.webp" alt="Close up portrait" className="w-full rounded-xl shadow-lg" />
-              </div>
-                <div className="border-white border-[4px] rounded-xl shadow-lg">
-                  <img src="/tennis-player.webp" alt="Eye detail" className="w-full rounded-xl shadow-lg" />
-                </div>
+                </p>
               </div>
               
               {/* Right Column - Images */}
               <div className="flex flex-col gap-4">
-                <div className="border-white border-[4px] rounded-xl shadow-lg">
-                  <img src="/vertical-facecream-add.webp" alt="Close up portrait" className="w-full rounded-xl  " />
-
-                </div>
-                <div className="border-white border-[4px] rounded-xl shadow-lg">
-                  <img src="/bird.webp" alt="Tennis player" className="w-full rounded-xl shadow-lg" />
-                </div>
+                <img src="/close-up-male.webp" alt="Close up portrait" className="w-full rounded-xl shadow-lg" />
+                <img src="/eye-male.webp" alt="Eye detail" className="w-full rounded-xl shadow-lg" />
               </div>
             </div>
           </div>

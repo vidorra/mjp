@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import VerticalPhotoSmallStack from '../components/VerticalPhotoSmallStack';
+import VerticalPhotoStack from '../../components/VerticalPhotoStack';
 import '@/styles/fontawesome.css';
 
-export default function Home() {
-  const photos = [
+export default function OldHomepage() {
+  const heroPhotos = [
     {
       id: 1,
       src: '/close-up-male.webp',
@@ -11,103 +11,143 @@ export default function Home() {
     },
     {
       id: 2,
-      src: '/street.webp',
-      alt: 'Street photography'
+      src: '/bg.webp',
+      alt: 'Background landscape'
     },
     {
       id: 3,
-      src: '/mauritanian-male.webp',
-      alt: 'Mauritanian male portrait'
+      src: '/eye-male.webp',
+      alt: 'Eye detail shot'
     },
     {
       id: 4,
-      src: '/watching-ipad.webp',
-      alt: 'Person watching iPad'
+      src: '/birdseye-view-amsterdam.webp',
+      alt: 'Birds eye view'
     },
     {
       id: 5,
-      src: '/bg.webp',
-      alt: 'Close up portrait'
+      src: '/street.webp',
+      alt: 'Street photography'
+    }
+  ];
+
+  const photos = [
+    {
+      id: 1,
+      src: '/bird.webp',
+      alt: 'Bird photography'
+    },
+    {
+      id: 2,
+      src: '/tennis-player.webp',
+      alt: 'Tennis player'
+    },
+    {
+      id: 3,
+      src: '/vertical-facecream-add.webp',
+      alt: 'Vertical face cream ad'
+    },
+    {
+      id: 5,
+      src: '/horizontal-facecream-add.webp',
+      alt: 'Horizontal face cream ad'
+    },
+    {
+      id: 6,
+      src: '/mauritanian-male.webp',
+      alt: 'Mauritanian male portrait'
+    }
+  ];
+
+  const featureCards = [
+    {
+      icon: "far fa-camera",
+      title: "Smart Camera Selection",
+      description: "Get tailored camera and lens recommendations based on your chosen style and shot type."
+    },
+    {
+      icon: "far fa-lightbulb-on",
+      title: "Lighting Mastery",
+      description: "Choose from various lighting setups to enhance your images with the perfect atmosphere."
+    },
+    {
+      icon: "far fa-compass",
+      title: "Dynamic Angles",
+      description: "Explore different perspectives with our comprehensive camera angle suggestions."
+    }
+  ];
+
+  const steps = [
+    {
+      number: "1",
+      title: "Choose Your Subject",
+      description: "Select from various categories or enter your own subject."
+    },
+    {
+      number: "2",
+      title: "Pick Your Style",
+      description: "Choose from portrait, product, landscape, and more."
+    },
+    {
+      number: "3",
+      title: "Customize Settings",
+      description: "Fine-tune angles, lighting, and technical parameters."
+    },
+    {
+      number: "4",
+      title: "Generate & Create",
+      description: "Get your optimized prompt and start creating."
+    }
+  ];
+
+  const exampleOutputs = [
+    {
+      image: "/close-up-male.webp",
+      title: "Portrait Photography",
+      description: "Close-up portrait of a man, Canon EF 85mm f/1.4L, natural lighting, eye-level angle"
+    },
+    {
+      image: "/face-cream.webp",
+      title: "Product Photography",
+      description: "Cosmetic product shot, Sony A7R IV with 90mm Macro, studio lighting setup"
+    },
+    {
+      image: "/Grain_field_Hight_Angle.webp",
+      title: "Landscape Photography",
+      description: "Aerial view of grain field, Nikon D850 with 14-24mm f/2.8, golden hour lighting"
     }
   ];
 
   return (
-    <div className="min-h-screen relative bg-background">
+    <div className="min-h-screen relative bg-background"> 
       {/* Hero Section */}
-      <section className="h-screen relative z-0">
-        {/* Centered Content */}
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="text-center max-w-xl bg-background backdrop-blur-sm rounded-xl p-8">
-            <h1 className="text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-foreground font-semibold mb-6">
-              Create Perfect
-              <br />
-              <span className="gradient-text">Photo Prompts</span>
-            </h1>
-            <p className="text-[clamp(1rem,1.5vw,1.5rem)] leading-[1.4] mb-8 text-gray-600">
-              Generate professional photography prompts with our intuitive tool. Perfect for photographers, artists, and creators.
-            </p>
-            <Link
-              href="/tool"
-              className="btn-large font-semibold text-[clamp(0.875rem,1vw,1.125rem)] bg-primary inline-flex items-center gap-2 w-fit mx-auto"
-            >
-              <i className="far fa-sparkles"></i>
-              Create Prompts
-            </Link>
-          </div>
+      <section className="h-screen flex relative z-0">
+        {/* Left Content */}
+        <div className="w-[540px] flex flex-col justify-center pl-8 lg:pl-16">
+          <h1 className="text-5xl lg:text-6xl text-foreground font-semibold mb-6">
+            Create Perfect
+            <br />
+            <span className="text-primary">Photo Prompts</span> 
+          </h1>
+          <p className="text-lg mb-8 text-gray-600 max-w-xl">
+            Generate professional photography prompts with our intuitive tool. Perfect for photographers, artists, and creators.
+          </p>
+          <Link
+            href="/tool"
+            className="btn-large font-semibold text-sm bg-primary inline-flex items-center gap-2 w-fit"
+          >
+            <i className="far fa-sparkles"></i>
+            Create Prompts
+          </Link>
         </div>
 
-        {/* Photo Stack */}
-        <div className="absolute inset-0">
-          <VerticalPhotoSmallStack photos={photos} containerHeight={3000} />
+        {/* Right Photo Stack */}
+        <div className="flex-1 relative">
+          <VerticalPhotoStack photos={heroPhotos} containerHeight={3000} />
         </div>
       </section>
 
-      {/* Gradient Section */}
-      <section className="h-screen bg-background relative z-0 p-20">
-        <div
-          className="h-full rounded-32 overflow-hidden"
-          style={{ background: 'radial-gradient(100.18% 100.18% at 50% -0.18%, var(--secondary) 0%, var(--primary) 100%)' }}
-        >
-          <div className="grid grid-cols-12 gap-8 h-full p-12">
-            <div className="col-span-5">
-              <div className="text-white pr-4">
-                <h2 className="text-[clamp(2rem,4vw,3rem)] font-normal mb-6 leading-[1.1]">
-                    Create Perfect
-                    <br />
-                    Photo Prompts
-                </h2>
-                <p className="text-[clamp(1rem,1.5vw,1.5rem)] leading-[1.4] opacity-90">
-                  Our advanced tools and intuitive interface help you create stunning visuals that capture the perfect moment, every time.
-                </p>  
-              </div>  
-            </div>
-            <div className="col-span-7 grid grid-cols-2 gap-8 items-center">
-              {/* Left Column - Text */}
-             
-              <div className="flex flex-col gap-4">
-              <div className="border-white border-[4px] rounded-xl shadow-lg">
-                <img src="/horizontal-facecream-add.webp" alt="Close up portrait" className="w-full rounded-xl shadow-lg" />
-              </div>
-                <div className="border-white border-[4px] rounded-xl shadow-lg">
-                  <img src="/tennis-player.webp" alt="Eye detail" className="w-full rounded-xl shadow-lg" />
-                </div>
-              </div>
-              
-              {/* Right Column - Images */}
-              <div className="flex flex-col gap-4">
-                <div className="border-white border-[4px] rounded-xl shadow-lg">
-                  <img src="/vertical-facecream-add.webp" alt="Close up portrait" className="w-full rounded-xl  " />
-
-                </div>
-                <div className="border-white border-[4px] rounded-xl shadow-lg">
-                  <img src="/bird.webp" alt="Tennis player" className="w-full rounded-xl shadow-lg" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <div className="w-full h-[120px] bg-gradient-to-b from-transparent to-white z-20 relative"></div>
       <div className="bg-white z-20 relative">
         {/* Categories Section */}
         <section className="px-12 py-16 bg-white container">
@@ -237,10 +277,10 @@ export default function Home() {
                   
                   {/* Image columns */}
                   <div className="col-span-4 rounded-xl overflow-hidden">
-                    <img src="/close-up-male.webp" alt="Close up portrait" className="w-full h-64 object-cover" />
+                    <img src={exampleOutputs[0].image} alt={exampleOutputs[0].title} className="w-full h-64 object-cover" />
                   </div>
                   <div className="col-span-4 rounded-xl overflow-hidden">
-                    <img src="/face-cream.webp" alt="Face cream product" className="w-full h-64 object-cover" />
+                    <img src={exampleOutputs[1].image} alt={exampleOutputs[1].title} className="w-full h-64 object-cover" />
                   </div>
                 </div>
                 
@@ -281,7 +321,7 @@ export default function Home() {
             
             <div className="w-1/3 relative">
               <div className="absolute -top-24 -right-8">
-                <img src="/eye-male.webp" alt="Eye detail shot" className="w-64 h-80 object-cover rounded-xl shadow-lg" />
+                <img src={heroPhotos[2].src} alt={heroPhotos[2].alt} className="w-64 h-80 object-cover rounded-xl shadow-lg" />
               </div>
             </div>
           </div>

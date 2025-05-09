@@ -12,9 +12,9 @@
     --popover: #ffffff;
     --popover-foreground: #020817;
     
-    --primary: #e17547;
+    --primary: #DF6A18;
     --primary-foreground: #ffffff;
-    --secondary: #FFB768;
+    --secondary: #E88E2B;
     --secondary-foreground: #ffffff;
 
     --radius: 8px;
@@ -43,6 +43,21 @@ body {
 
 
 @layer components {
+  .rounded-32 {
+    border-radius: 32px;
+  }
+  
+  .gradient-text {
+    background: radial-gradient(100.18% 100.18% at 50% -0.18%, var(--secondary) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1800px;
+    }
+  }
   .btn-small {
     @apply bg-secondary text-primary-foreground hover:bg-primary inline-flex items-center justify-center rounded-[12px] text-sm font-medium transition-colors  h-9 px-4 py-2 flex-1;
   }

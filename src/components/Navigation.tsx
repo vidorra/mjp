@@ -34,6 +34,11 @@ export default function Navigation() {
             Home
           </Link>
         </li>
+        {/* <li>
+          <Link href="/old-homepage" className={linkClass('/old-homepage')}>
+            Old Homepage
+          </Link>
+        </li> */}
         <li>
           <Link href="/tool" className={linkClass('/tool')}>
             Prompt Builder
@@ -51,6 +56,24 @@ export default function Navigation() {
               onClick={() => setIsOpen(false)}
             >
               Home
+            </Link>
+          </li>
+          <li className="mb-2">
+            <Link
+              href="/example"
+              className={linkClass('/example')}
+              onClick={() => setIsOpen(false)}
+            >
+              Example
+            </Link>
+          </li>
+          <li className="mb-2">
+            <Link
+              href="/old-homepage"
+              className={linkClass('/old-homepage')}
+              onClick={() => setIsOpen(false)}
+            >
+              Old Homepage
             </Link>
           </li>
           <li>
