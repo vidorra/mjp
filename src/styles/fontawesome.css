@@ -7,6 +7,15 @@
        url('/fonts/fontawesome/fa-regular-400.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Font Awesome 6 Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('/fonts/fontawesome/fa-solid-900.woff2') format('woff2'),
+       url('/fonts/fontawesome/fa-solid-900.ttf') format('truetype');
+}
+
 .far,
 .fa-regular {
   font-family: 'Font Awesome 6 Pro';
@@ -42,4 +51,29 @@
 
 .fa-sparkles:before {
   content: "\f890";
+}
+
+.fa-copy:before {
+  content: "\f0c5";
+}
+
+
+
+/* Specific rule for the sparkles icon */
+.far.fa-sparkles:before {
+  content: "\f890";
+  font-family: 'Font Awesome 6 Pro';
+  font-weight: 400;
+}
+
+.fa-camera:before {
+  content: "\f030";
+}
+
+.fa-lightbulb-on:before {
+  content: "\f672";
+}
+
+.fa-compass:before {
+  content: "\f14e";
 }

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import VerticalPhotoSmallStack from '../components/VerticalPhotoSmallStack';
-import '@/styles/fontawesome.css';
 
 export default function Home() {
   const photos = [

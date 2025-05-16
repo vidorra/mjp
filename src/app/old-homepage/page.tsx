@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import VerticalPhotoStack from '../../components/VerticalPhotoStack';
-import '@/styles/fontawesome.css';
 
 export default function OldHomepage() {
   const heroPhotos = [

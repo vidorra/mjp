@@ -1,13 +1,14 @@
 // components/PromptOverlay.tsx
 import React from 'react';
 import { findMatchingImage, getHighlightedWords, type BackgroundImage } from '../lib/backgroundData';
+import { LightingOptions } from './EnhancedLighting';
 
 type PromptOverlayProps = {
     style?: string;
     shotType?: string;
     category?: string;
     subcategory?: string;
-    lighting?: string;
+    lighting?: LightingOptions;
 };
 
 const PromptOverlay = ({ 
@@ -20,7 +21,7 @@ const PromptOverlay = ({
     console.log('PromptOverlay mounted');
     console.log('Received props:', { style, shotType, category, subcategory, lighting });
 
-    const matchingImage = findMatchingImage(style, shotType, category, subcategory, lighting);
+    const matchingImage = findMatchingImage(style, shotType, category, subcategory, lighting?.type);
     console.log('Found matching image:', matchingImage);
 
     const highlightWords = getHighlightedWords(
@@ -29,7 +30,7 @@ const PromptOverlay = ({
         shotType,
         category,
         subcategory,
-        lighting
+        lighting?.type
     );
 
     console.log('Words to highlight:', highlightWords);

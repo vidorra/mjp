@@ -4,8 +4,11 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import Link from 'next/link';
 import "./globals.css";
+import "../styles/fontawesome.css";
 import { BackgroundProvider } from "../contexts/BackgroundContext";
+import { AdvancedModeProvider } from "../contexts/AdvancedModeContext";
 import Navigation from '../components/Navigation';
+import HeaderWithAdvancedMode from '../components/HeaderWithAdvancedMode';
 
 export const metadata: Metadata = {
   title: "Midjourney Prompt Builder",
@@ -19,20 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head></head>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased min-h-screen bg-cover bg-center bg-fixed transition-[background-image] duration-500`}
       >
-        <header className="fixed top-0 left-0 right-0 z-[1000] bg-[#fcf4e9] md:w-[calc(100%-720px)]">
-          <div className="flex items-center mx-4 md:mx-6 my-5 justify-between">
-            <Link href="/" className="text-lg font-medium   hover:text-gray-600 transition-colors">
-              Photography Prompt
-            </Link>
-            <Navigation />
-          </div>
-        </header>
-        <BackgroundProvider>
-          {children}
-        </BackgroundProvider>
+        <AdvancedModeProvider>
+          <HeaderWithAdvancedMode />
+          <BackgroundProvider>
+            {children}
+          </BackgroundProvider>
+        </AdvancedModeProvider>
       </body>
     </html>
   );

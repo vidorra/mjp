@@ -4,9 +4,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { findMatchingImage } from '../lib/backgroundData';
 
+import { LightingOptions } from '@/components/EnhancedLighting';
+
 type BackgroundContextType = {
   currentBackground: string;
-  updateBackground: (style?: string, shotType?: string, category?: string, subcategory?: string, lighting?: string) => void;
+  updateBackground: (style?: string, shotType?: string, category?: string, subcategory?: string, lighting?: LightingOptions) => void;
 };
 
 const BackgroundContext = createContext<BackgroundContextType>({
@@ -22,9 +24,9 @@ export function BackgroundProvider({ children }: { children: React.ReactNode }) 
     shotType?: string,
     category?: string,
     subcategory?: string,
-    lighting?: string
+    lighting?: LightingOptions
   ) => {
-    const matchingImage = findMatchingImage(style, shotType, category, subcategory, lighting);
+    const matchingImage = findMatchingImage(style, shotType, category, subcategory, lighting?.type);
     if (matchingImage) {
       setCurrentBackground(`/${matchingImage.filename}`);
     }

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useAdvancedMode } from '../contexts/AdvancedModeContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, SelectGroup, SelectLabel, SelectSeparator } from '@/components/ui/select';
@@ -8,7 +9,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { useBackground } from '../contexts/BackgroundContext';
 import PromptOverlay from './PromptOverlay';
 import { CameraAngle, cameraAngles, getSuggestedAngles } from '@/types/photography';
-import '@/styles/fontawesome.css';
 
 // Types
 type ObjectCategory = {
@@ -56,7 +56,10 @@ const photographyStyles = [
   { value: 'portrait', label: 'Portrait Photography', suggestedShots: ['extreme-close-up', 'medium', 'close-up'] },
   { value: 'landscape', label: 'Landscape Photography', suggestedShots: ['wide', 'extreme-wide'] },
   { value: 'street', label: 'Street Photography', suggestedShots: ['medium', 'wide'] },
-  { value: 'macro', label: 'Macro Photography', suggestedShots: ['macro', 'extreme-close-up'] }
+  { value: 'macro', label: 'Macro Photography', suggestedShots: ['macro', 'extreme-close-up'] },
+  { value: 'cinematic', label: 'Cinematic Photography', suggestedShots: ['wide', 'medium'] },
+  { value: 'editorial', label: 'Editorial Photography', suggestedShots: ['medium', 'full'] },
+  { value: 'documentary', label: 'Documentary Photography', suggestedShots: ['medium', 'wide'] }
 ];
 
 // Updated shot types with clear separation
@@ -108,13 +111,7 @@ const getSuggestedShotTypes = (style: string) => {
 //   { value: 'oblique', label: 'Oblique View' }
 // ];
 
-const lightingTypes = [
-  { value: 'natural', label: 'Natural Lighting' },
-  { value: 'studio', label: 'Studio Lighting' },
-  { value: 'golden-hour', label: 'Golden Hour' },
-  { value: 'blue-hour', label: 'Blue Hour' },
-  { value: 'fluorescent', label: 'Fluorescent Lighting' }
-];
+import EnhancedLighting, { LightingOptions } from './EnhancedLighting';
 
 // Updated camera recommendations based on style and shot type
 const cameraRecommendations: { [key: string]: { [key: string]: CameraGear } } = {
@@ -213,6 +210,24 @@ const photographySuggestions: { [key: string]: PhotographySuggestion[] } = {
     { tag: 'Time of Day', info: 'Specify when the photo was taken' },
     { tag: 'Weather', info: 'Include weather conditions' },
     { tag: 'Urban Elements', info: 'Mention specific city features' }
+  ],
+  'cinematic': [
+    { tag: 'Mood', info: 'Set the emotional tone of the shot' },
+    { tag: 'Color Grading', info: 'Specify color treatment' },
+    { tag: 'Composition', info: 'Use cinematic framing techniques' },
+    { tag: 'Atmosphere', info: 'Describe the overall ambiance' }
+  ],
+  'editorial': [
+    { tag: 'Story Context', info: 'Provide narrative context' },
+    { tag: 'Setting', info: 'Describe the environment' },
+    { tag: 'Styling', info: 'Include fashion and prop details' },
+    { tag: 'Composition', info: 'Use magazine-style framing' }
+  ],
+  'documentary': [
+    { tag: 'Event', info: 'Describe the event or situation' },
+    { tag: 'Environment', info: 'Include contextual details' },
+    { tag: 'Time Period', info: 'Specify when it takes place' },
+    { tag: 'Cultural Elements', info: 'Add relevant cultural context' }
   ]
 };
 
@@ -280,7 +295,10 @@ export default function PromptBuilder() {
   }, [shotType]);
   const [cameraAngle, setCameraAngle] = useState('front-view');
   const [isAerialPhoto, setIsAerialPhoto] = useState(false);
-  const [lighting, setLighting] = useState('natural');
+  const { isAdvancedMode, setIsAdvancedMode } = useAdvancedMode();
+  const [lighting, setLighting] = useState<LightingOptions>({
+    type: 'natural'
+  });
   const [generatedPrompt, setGeneratedPrompt] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedSubcategory, setSelectedSubcategory] = useState('');
@@ -344,7 +362,7 @@ export default function PromptBuilder() {
       `from ${cameraAngle} angle`,
       isAerialPhoto ? 'aerial photo' : '',
       `captured with ${gear.camera} using ${gear.lens}`,
-      `${lighting} lighting`
+      `${lighting.type} lighting${lighting.quality ? `, ${lighting.quality}` : ''}${lighting.shadows ? `, ${lighting.shadows}` : ''}${lighting.direction ? `, ${lighting.direction}` : ''}`
     ].filter(Boolean);
 
     const parameters = [];
@@ -371,7 +389,15 @@ export default function PromptBuilder() {
   }, [selectedStyle, shotType, selectedCategory, selectedSubcategory, lighting, updateBackground]);
 
   return (
-    <div className="space-y-6 ml-auto max-w-[688px]">
+    <div className={`space-y-6 ml-auto ${isAdvancedMode ? 'max-w-[1032px]' : 'max-w-[688px]'} transition-all duration-300`}>
+      <div className="flex justify-end">
+        <button
+          onClick={() => setIsAdvancedMode(!isAdvancedMode)}
+          className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
+        >
+          {isAdvancedMode ? 'Switch to Basic Mode' : 'Switch to Advanced Mode'}
+        </button>
+      </div>
       <div className="relative">
         <input 
           type="text"
@@ -456,26 +482,36 @@ export default function PromptBuilder() {
             </CardContent>
           </Card>
 
-          {/* Lighting */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-sm">Lighting</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Select value={lighting} onValueChange={setLighting}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select lighting" />
-                </SelectTrigger>
-                <SelectContent>
-                  {lightingTypes.map((type) => (
-                    <SelectItem key={type.value} value={type.value}>
-                      {type.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </CardContent>
-          </Card>
+          {/* Lighting Controls */}
+          {isAdvancedMode ? (
+            <EnhancedLighting value={lighting} onChange={setLighting} />
+          ) : (
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-sm">Lighting</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Select value={lighting.type} onValueChange={(value) => setLighting({ ...lighting, type: value })}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select lighting" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {[
+                      { value: 'natural', label: 'Natural Lighting' },
+                      { value: 'studio', label: 'Studio Lighting' },
+                      { value: 'golden-hour', label: 'Golden Hour' },
+                      { value: 'blue-hour', label: 'Blue Hour' },
+                      { value: 'fluorescent', label: 'Fluorescent Lighting' }
+                    ].map((type) => (
+                      <SelectItem key={type.value} value={type.value}>
+                        {type.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </CardContent>
+            </Card>
+          )}
 
           {/* Shot Type */}
           <Card>
@@ -857,8 +893,20 @@ export default function PromptBuilder() {
 
         {/* Generated Prompt Display */}
         {generatedPrompt && (
-          <Alert className="mt-6">
-            <AlertTitle>Generated Prompt:</AlertTitle>
+          <Alert className="mt-6 relative">
+            <div className="flex justify-between items-center">
+              <AlertTitle>Generated Prompt:</AlertTitle>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(generatedPrompt);
+                  alert('Prompt copied to clipboard!');
+                }}
+                className="text-primary hover:text-primary/80 transition-colors"
+                title="Copy to clipboard"
+              >
+                <i className="far fa-copy"></i>
+              </button>
+            </div>
             <AlertDescription className="mt-2 text-sm break-words">
               {generatedPrompt}
             </AlertDescription>
