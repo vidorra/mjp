@@ -26,8 +26,13 @@ const objectCategories: ObjectCategory[] = [
     subcategories: ['Electronics', 'Fashion', 'Food', 'Furniture', 'Vehicle', 'Jewelry']
   },
   {
-    category: 'Architecture & Interiors',
-    subcategories: ['Residential Interior', 'Commercial Interior', 'Building Exterior', 'Urban Architecture', 'Architectural Details']
+    category: 'Spaces',
+    subcategories: [
+      // Architecture subcategories
+      'Building Exterior', 'Urban Architecture', 'Architectural Details', 'Historic Building', 'Modern Building', 'Skyscraper',
+      // Interior subcategories
+      'Residential Interior', 'Commercial Interior', 'Minimalist Interior', 'Luxury Interior', 'Traditional Interior', 'Modern Interior'
+    ]
   },
   {
     category: 'Nature',
@@ -75,7 +80,7 @@ export default function CategorySelector({
                 {cat.category === 'Person' && <i className="far fa-user text-2xl" />}
                 {cat.category === 'Animal' && <i className="far fa-dog text-2xl" />}
                 {cat.category === 'Product' && <i className="far fa-box-open text-2xl" />}
-                {cat.category === 'Architecture & Interiors' && <i className="far fa-building text-2xl" />}
+                {cat.category === 'Spaces' && <i className="far fa-building text-2xl" />}
                 {cat.category === 'Nature' && <i className="far fa-tree text-2xl" />}
                 <span className="text-sm">{cat.category}</span>
               </button>

@@ -54,13 +54,21 @@ const photographySuggestions: { [key: string]: PhotographySuggestion[] } = {
     { tag: 'Time Period', info: 'Specify when it takes place' },
     { tag: 'Cultural Elements', info: 'Add relevant cultural context' }
   ],
-  'architecture & interiors': [
+  'spaces': [
+    // Architecture suggestions
+    { tag: 'Building Style', info: 'Describe the architectural style' },
+    { tag: 'Architectural Features', info: 'Highlight specific architectural elements' },
+    { tag: 'Urban Context', info: 'Describe the surrounding environment' },
+    { tag: 'Exterior Materials', info: 'Specify the building materials used' },
+    { tag: 'Scale', info: 'Indicate the size or scale of the structure' },
+    // Interior suggestions
     { tag: 'Room Type', info: 'Specify the type of interior space' },
     { tag: 'Design Style', info: 'Describe the interior design style' },
     { tag: 'Lighting Conditions', info: 'Describe the interior lighting' },
-    { tag: 'Architectural Features', info: 'Highlight specific architectural elements' },
-    { tag: 'Building Style', info: 'Describe the architectural style' },
-    { tag: 'Urban Context', info: 'Describe the surrounding environment' }
+    { tag: 'Furniture', info: 'Describe key furniture pieces' },
+    { tag: 'Materials', info: 'Specify materials used in the interior' },
+    { tag: 'Color Scheme', info: 'Describe the color palette of the space' },
+    { tag: 'Mood', info: 'Convey the atmosphere of the interior' }
   ]
 };
 

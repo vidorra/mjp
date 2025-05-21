@@ -115,21 +115,38 @@ const cameraRecommendations: { [key: string]: { [key: string]: CameraGear } } = 
       notes: 'Cinematic shallow focus'
     }
   },
-  'architecture & interiors': {
-    'wide': {
-      camera: 'Canon EOS R5',
-      lens: '16-35mm f/2.8L',
-      notes: 'Wide angle for architecture'
-    },
-    'detail': {
-      camera: 'Nikon Z7 II',
-      lens: '105mm f/2.8 Macro',
-      notes: 'Interior detail shots'
-    },
+  'spaces': {
+    // Architecture recommendations
     'building-exterior': {
       camera: 'Sony A7R V',
       lens: '24-70mm f/2.8 GM',
       notes: 'Versatile for architectural exteriors'
+    },
+    'architectural-wide': {
+      camera: 'Canon EOS R5',
+      lens: '16-35mm f/2.8L',
+      notes: 'Wide angle for architecture'
+    },
+    'architectural-detail': {
+      camera: 'Nikon Z7 II',
+      lens: '70-200mm f/2.8',
+      notes: 'Architectural detail shots'
+    },
+    // Interior recommendations
+    'interior-wide': {
+      camera: 'Sony A7R V',
+      lens: '12-24mm f/2.8 GM',
+      notes: 'Ultra-wide for interior spaces'
+    },
+    'interior-medium': {
+      camera: 'Canon EOS R5',
+      lens: '24-70mm f/2.8L',
+      notes: 'Versatile for interior photography'
+    },
+    'interior-detail': {
+      camera: 'Nikon Z7 II',
+      lens: '105mm f/2.8 Macro',
+      notes: 'Interior detail shots'
     }
   }
 };
