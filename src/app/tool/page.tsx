@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import { useBackground } from '@/contexts/BackgroundContext';
 
-const PromptBuilder = dynamic(() => import('@/components/PromptBuilder'), {
+const ToolContent = dynamic(() => import('@/components/ToolContent'), {
   ssr: false
 });
 
@@ -12,7 +12,7 @@ export default function ToolPage() {
 
   return (
     <main
-      className="min-h-screen p-4 flex justify-center"
+      className="min-h-screen flex justify-end w-full"
       style={{
         backgroundImage: `url(${currentBackground})`,
         backgroundSize: 'cover',
@@ -20,9 +20,7 @@ export default function ToolPage() {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="w-full">
-        <PromptBuilder />
-      </div>
+      <ToolContent />
     </main>
   );
 }

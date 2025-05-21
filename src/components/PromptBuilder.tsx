@@ -8,6 +8,9 @@ import { useBackground } from '../contexts/BackgroundContext';
 import PromptOverlay from './PromptOverlay';
 import EnhancedLighting, { LightingOptions } from './EnhancedLighting';
 import PersonBuilder from './PersonBuilder';
+import ActivitiesBuilder from './ActivitiesBuilder';
+import ContentCreationBuilder from './ContentCreationBuilder';
+import LivePromptPreview from './LivePromptPreview';
 
 // Import our new components
 import CategorySelector from './CategorySelector';
@@ -17,6 +20,8 @@ import CameraAngleSelector from './CameraAngleSelector';
 import AdvancedSettings from './AdvancedSettings';
 import SuggestionPanel from './SuggestionPanel';
 import { getCameraRecommendation, getDepthDescription } from './CameraRecommendation';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 export default function PromptBuilder() {
   // Base states
@@ -28,8 +33,11 @@ export default function PromptBuilder() {
   const [variety, setVariety] = useState(0);
   const [subject, setSubject] = useState('');
   const [personDetails, setPersonDetails] = useState('');
+  const [activities, setActivities] = useState('');
+  const [contentDetails, setContentDetails] = useState('');
   const [selectedStyle, setSelectedStyle] = useState('portrait');
   const [shotType, setShotType] = useState('extreme-close-up');
+  const [selectedPersona, setSelectedPersona] = useState<string>('');
   
   // Reset depth option when switching to a shot type that doesn't support it
   useEffect(() => {
@@ -89,6 +97,8 @@ export default function PromptBuilder() {
     const promptParts = [
       subject,
       personDetails, // Add person details if available
+      activities, // Add activities if available
+      contentDetails, // Add content creation details if available
       selectedCategory && selectedSubcategory ? `${selectedSubcategory} ${selectedCategory.toLowerCase()}` : '',
       `${selectedStyle} style photography`,
       `${shotType} shot`,
@@ -123,16 +133,8 @@ export default function PromptBuilder() {
   }, [selectedStyle, shotType, selectedCategory, selectedSubcategory, lighting, updateBackground]);
 
   return (
-    <div className={`space-y-6 ml-auto ${isAdvancedMode ? 'max-w-[1032px]' : 'max-w-[688px]'} transition-all duration-300`}>
-      <div className="flex justify-end">
-        <button
-          onClick={() => setIsAdvancedMode(!isAdvancedMode)}
-          className="text-sm text-[#FFB768] hover:text-[#FFB768]/80 transition-colors font-medium"
-        >
-          {isAdvancedMode ? 'Switch to Basic Mode' : 'Switch to Advanced Mode'}
-        </button>
-      </div>
-      <div className="relative">
+    <div className="space-y-6">
+        <div className="relative">
         <input
           type="text"
           value={subject}
@@ -248,33 +250,53 @@ export default function PromptBuilder() {
             </Button>
           </div>
 
-          {/* Generated Prompt Display */}
+          {/* Live Prompt Preview */}
           {generatedPrompt && (
-            <Alert className="mt-6 relative">
-              <div className="flex justify-between items-center">
-                <AlertTitle>Generated Prompt:</AlertTitle>
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(generatedPrompt);
-                    alert('Prompt copied to clipboard!');
-                  }}
-                  className="text-primary hover:text-primary/80 transition-colors"
-                  title="Copy to clipboard"
-                >
-                  <i className="far fa-copy"></i>
-                </button>
-              </div>
-              <AlertDescription className="mt-2 text-sm break-words">
-                {generatedPrompt}
-              </AlertDescription>
-            </Alert>
+            <div className="mt-6">
+              <LivePromptPreview
+                prompt={generatedPrompt}
+                sections={[
+                  { title: 'Subject', content: subject, color: 'rgba(255, 183, 104, 0.1)' },
+                  { title: 'Person', content: personDetails, color: 'rgba(104, 211, 255, 0.1)' },
+                  { title: 'Activities', content: activities, color: 'rgba(104, 255, 130, 0.1)' },
+                  { title: 'Content', content: contentDetails, color: 'rgba(255, 104, 195, 0.1)' },
+                  { title: 'Category', content: selectedCategory && selectedSubcategory ? `${selectedSubcategory} ${selectedCategory.toLowerCase()}` : '', color: 'rgba(255, 234, 104, 0.1)' },
+                  { title: 'Style', content: `${selectedStyle} style photography`, color: 'rgba(186, 104, 255, 0.1)' },
+                  { title: 'Shot', content: `${shotType} shot${depthOption ? ` with ${depthOption}` : ''}`, color: 'rgba(255, 104, 104, 0.1)' },
+                  { title: 'Angle', content: `from ${cameraAngle} angle${isAerialPhoto ? ', aerial photo' : ''}`, color: 'rgba(104, 255, 213, 0.1)' },
+                  { title: 'Camera', content: `captured with ${getCameraRecommendation(selectedStyle, shotType, depthOption).camera} using ${getCameraRecommendation(selectedStyle, shotType, depthOption).lens}`, color: 'rgba(177, 255, 104, 0.1)' },
+                  { title: 'Lighting', content: `${lighting.type} lighting${lighting.quality ? `, ${lighting.quality}` : ''}${lighting.shadows ? `, ${lighting.shadows}` : ''}${lighting.direction ? `, ${lighting.direction}` : ''}`, color: 'rgba(255, 162, 104, 0.1)' }
+                ]}
+              />
+            </div>
           )}
         </div>
         
         {/* Person Builder Card - Only show when button is clicked and in Advanced Mode */}
         {showPersonBuilder && isAdvancedMode && selectedCategory === 'Person' && (
-          <div className="backdrop-blur-lg bg-white rounded-[24px] shadow-lg p-6 text-foreground flex-grow md:max-w-[400px]">
-            <PersonBuilder onPersonDetailsChange={setPersonDetails} />
+          <div className="backdrop-blur-lg bg-white rounded-[24px] shadow-lg p-6 text-foreground flex-grow md:w-[400px] md:min-w-[400px] space-y-6">
+            <PersonBuilder
+              key={selectedSubcategory} // Add key to force re-render when gender changes
+              onPersonDetailsChange={(details) => {
+                setPersonDetails(details);
+                // Extract persona name if it's in the details
+                const personaMatch = details.match(/^(Instagram Model|Corporate Professional|Fitness Enthusiast|Creative Artist|Content Creator|Business Executive|Casual Portrait)/);
+                if (personaMatch && personaMatch[1]) {
+                  setSelectedPersona(personaMatch[1]);
+                }
+              }}
+              gender={selectedSubcategory === 'Male' ? 'male' : selectedSubcategory === 'Female' ? 'female' : selectedSubcategory === 'Other' ? 'other' : ''}
+            />
+            
+            <ActivitiesBuilder
+              onActivitiesChange={setActivities}
+              selectedPersona={selectedPersona}
+            />
+            
+            {/* Only show Content Creation Builder for certain subcategories */}
+            {(selectedSubcategory === 'Male' || selectedSubcategory === 'Female' || selectedSubcategory === 'Other') && (
+              <ContentCreationBuilder onContentDetailsChange={setContentDetails} />
+            )}
           </div>
         )}
       </div>
@@ -289,7 +311,3 @@ export default function PromptBuilder() {
     </div>
   );
 }
-
-// Import the Card components for the basic lighting control
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';

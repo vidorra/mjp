@@ -15,7 +15,7 @@ type ObjectCategory = {
 const objectCategories: ObjectCategory[] = [
   {
     category: 'Person',
-    subcategories: ['Individual', 'Group', 'Professional', 'Athlete', 'Artist', 'Student']
+    subcategories: ['Male', 'Female', 'Other', 'Group']
   },
   {
     category: 'Animal',
